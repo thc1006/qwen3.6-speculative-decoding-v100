@@ -64,7 +64,7 @@ Full details, exact commands, and the reproducer are in the accompanying reposit
 \begin{tikzpicture}
 \begin{axis}[width=13cm,height=7cm,xlabel={\texttt{--spec-draft-n-max}},ylabel={geomean speedup (paired)},
   xmin=0,xmax=16,ymin=0.4,ymax=1.7,xtick={1,2,3,4,6,8,11,15},grid=both,grid style={gray!20},
-  legend pos=south west,legend cell align=left,every axis plot/.append style={very thick,mark=*,mark size=1.6pt}]
+  legend pos=north east,legend cell align=left,every axis plot/.append style={very thick,mark=*,mark size=1.6pt}]
 \addplot[cdense] coordinates {(1,1.261)(2,1.411)(3,1.397)(4,1.463)(6,1.249)(8,1.087)(11,1.061)(15,0.995)};
 \addlegendentry{Dense 27B (base 37.6)}
 \addplot[cmoe] coordinates {(1,1.137)(2,1.210)(3,1.136)(4,1.187)(6,1.063)(8,0.829)(11,0.765)(15,0.683)};
@@ -125,7 +125,7 @@ mismatch could \emph{additionally} depress acceptance---a separate axis this mat
 \nextgroupplot[ybar,bar width=6pt,xlabel={category (at $n{=}8$)},ylabel={geomean speedup},
   symbolic x coords={code,math,factual,howto,analysis,creative},xtick=data,x tick label style={rotate=40,anchor=east,font=\footnotesize},
   ymin=0,ymax=1.7,grid=both,grid style={gray!20},legend pos=north east,legend cell align=left,
-  title={\footnotesize (b) per-category is bimodal}]
+  title={\footnotesize (b) per-category varies by workload}]
 \addplot[fill=cdense] coordinates {(code,1.501)(math,1.560)(factual,1.080)(howto,1.041)(analysis,0.839)(creative,0.717)};
 \addlegendentry{dense}
 \addplot[fill=cmoe] coordinates {(code,1.154)(math,1.193)(factual,0.812)(howto,0.764)(analysis,0.661)(creative,0.550)};
@@ -134,7 +134,7 @@ mismatch could \emph{additionally} depress acceptance---a separate axis this mat
 \end{groupplot}
 \end{tikzpicture}
 \caption{(a) Draft acceptance is near-identical between dense and MoE at every $n$, so draftability is not the differentiator.
-(b) Per-category speedup at $n{=}8$ is bimodal in both models (code/math draft well; creative/analysis do not), so a single
+(b) Per-category speedup at $n{=}8$ varies widely by workload in both models (code/math draft well; creative/analysis do not), so a single
 ``average speedup'' depends on the prompt mix.}
 \label{fig:accept}
 \end{figure}

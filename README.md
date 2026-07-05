@@ -58,7 +58,7 @@ Full tables with 95 % bootstrap CIs and per-category breakdowns: [`results/summa
 | 11 | 1.06 [0.95, 1.18] | 0.77 |
 | 15 | 0.995 [0.89, 1.11] | 0.68 [0.61, 0.77] |
 
-Per-category is **bimodal** (code/math draft well ~1.5×; creative/free-form poorly ~0.6×), so a single "average speedup" depends on the prompt mix — see the per-category tables.
+Per-category speedup **varies widely by workload** (code/math draft well ~1.5×; creative/free-form poorly ~0.6×), so a single "average speedup" depends on the prompt mix — see the per-category tables.
 
 ## Repository layout
 
