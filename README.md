@@ -1,5 +1,7 @@
 # DFlash speculative decoding on 2× V100 — a controlled dense-vs-MoE sweep
 
+[![DOI](https://zenodo.org/badge/1290121418.svg)](https://doi.org/10.5281/zenodo.21220227)
+
 A single-rig, quant-matched benchmark of [DFlash](https://z-lab.ai/projects/dflash/) speculative decoding
 ([llama.cpp PR #22105](https://github.com/ggml-org/llama.cpp/pull/22105),
 [issue #25117](https://github.com/ggml-org/llama.cpp/issues/25117)) on **2× Tesla V100 32 GB (sm_70)**,
@@ -95,6 +97,12 @@ This is a datapoint alongside prior thread contributors, not a correction of any
 @jschmied (low-n peak on Qwen3-Coder-Next),
 @HH1162 (MoE `--draft-max 16` no-speedup),
 @jerrydong1988 (the original #25117 MoE regression report).
+
+## Citation
+
+If you use this benchmark, please cite it via its Zenodo DOI:
+
+> Hsiu-Chi Tsai. *DFlash speculative decoding on 2x V100: a controlled dense-vs-MoE sweep.* Zenodo. https://doi.org/10.5281/zenodo.21220227
 
 ## Author & license
 
